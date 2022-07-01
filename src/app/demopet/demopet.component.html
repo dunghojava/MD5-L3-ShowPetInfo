@@ -1,0 +1,30 @@
+<label>Test thu xem cai nao</label>
+<!--<h1 *ngFor="let name of dongvat"><p style="color: aqua">Test</p>{{ ' ten la   ' + name.name + ' can nang la   ' + name.weight + ' tuoi la   ' + name.age}}</h1>-->
+<!--<div *ngFor="let inputAnimal of Animal">-->
+<!--  {{}}-->
+<!--</div>-->
+
+
+<h1>
+  <ng-template #thenblock2>
+    <p style="color: red ">may ngu vcl!!!!</p>
+  </ng-template>
+  --------------------------
+</h1>
+<div>
+
+  <h2 *ngFor="let listAnimal of dongvat">
+    <h2>Thay doi thong tin: </h2>
+    {{listAnimal.name + ' - ' + listAnimal.age + ' - ' + listAnimal.weight}}<br>
+    <p>---------------------------------------------</p>
+    <input type="text" [(ngModel)]="listAnimal.name">
+    <input type="number" [(ngModel)]="listAnimal.age">
+    <div *ngIf="listAnimal.age >= 100; then thenblock2"></div>
+    <input type="text" [(ngModel)]="listAnimal.weight">
+
+
+
+
+  </h2>
+
+</div>
